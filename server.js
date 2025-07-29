@@ -2,7 +2,8 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
-import { RtcTokenBuilder, RtcRole } from 'agora-access-token'
+import pkg from 'agora-access-token'
+const { RtcTokenBuilder, RtcRole } = pkg
 
 
 const { APP_ID, APP_CERT, DEFAULT_TTL = 3600 } = process.env
