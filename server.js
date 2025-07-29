@@ -2,7 +2,8 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
-import { RtcTokenBuilder, RtcRole } from '@jiasonglin/agora-access-token'
+import { RtcTokenBuilder, RtcRole } from 'agora-access-token'
+
 
 const { APP_ID, APP_CERT, DEFAULT_TTL = 3600 } = process.env
 if (!APP_ID || !APP_CERT) throw new Error('APP_ID / APP_CERT missing')
