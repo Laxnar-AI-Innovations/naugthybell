@@ -18,6 +18,8 @@ if (!APP_ID || !APP_CERT) {
 const app = express()
 app.use(cors())
 app.use(express.json())
+    
+app.get('/', (_, res) => res.send('Agora token server is alive. Hit /token?channel=xxx'))
 
 app.get('/token', (req, res) => {
   const { channel, uid = 0, role = 'publisher', ttl = DEFAULT_TTL } = req.query
